@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAT測試</title>
+<style>
+  /* 样式可以根据需要进行修改 */
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  h1 {
+    font-size: 40px; /* 調整標題文字大小 */
+  }
+  input[type="text"] {
+    width: 300px; /* 調整輸入框寬度 */
+    font-size: 28px; /* 調整輸入框文字大小 */
+    margin-bottom: 10px;
+  }
+  button {
+    font-size: 28px; /* 調整按鈕文字大小 */
+  }
+  #result {
+    margin-top: 20px;
+	color:red;
+    font-size: 28px; /* 調整結果文字大小 */
+  }
+</style>
+</head>
+<body>
+<h1 class="page-title">UAT測試</h1>
+<input type="text" id="inputBox1" placeholder="輸入資料">
+<button id="button1" onclick="displayResult1('inputBox1')">確定</button>
+</br>
+</br>
+<input type="text" id="inputBox2" placeholder="輸入資料">
+<button id="button2" onclick="displayResult2('inputBox2')">確定</button>
+
+<div id="result"></div>
+
+<script>
+function displayResult1(inputId) {
+  var input = document.getElementById(inputId).value;
+  var resultDiv = document.getElementById("result");
+  var resultText = "";
+  
+  // 检查输入并设置相应的结果文本
+  switch (input) {
+    case "NATC":
+      resultText = "主管JM，又高又帥";
+      break;
+    default:
+      resultText = "未知輸入";
+  }
+  
+  // 在结果div中显示结果文本
+  resultDiv.textContent = resultText;
+}
+
+function displayResult2(inputId) {
+  var input = document.getElementById(inputId).value;
+  var resultDiv = document.getElementById("result");
+  var resultText = "";
+  
+  // 检查输入并设置相应的结果文本
+  switch (input) {
+    case "JM":
+      resultText = "明天請客，JM買單";
+      break;
+    default:
+      resultText = "未知輸入";
+  }
+  
+  // 在结果div中显示结果文本
+  resultDiv.textContent = resultText;
+}
+</script>
+</body>
+</html>
